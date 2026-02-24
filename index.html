@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Índice de Sites da Turma</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Sites da Turma</h1>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Buscar sites..." aria-label="Buscar sites" />
+        <select id="categoryFilter" aria-label="Filtrar por categoria">
+          <option value="all">Todas as categorias</option>
+        </select>
+        <button id="addBtn" class="btn primary">+ Novo</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="toolbar" aria-hidden="true">
+      <small class="muted">Use o botão Novo para adicionar um site; clique no card para abrir; ícone editar para modificar.</small>
+    </section>
+
+    <section id="cards" class="cards-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal Form -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel" role="document">
+      <header class="modal-header">
+        <h2 id="modalTitle">Adicionar site</h2>
+        <button id="closeModal" class="btn icon" aria-label="Fechar">✕</button>
+      </header>
+      <form id="linkForm" class="form">
+        <input type="hidden" id="linkId" />
+        <label>
+          <span>Título</span>
+          <input id="title" required />
+        </label>
+        <label>
+          <span>URL</span>
+          <input id="url" type="url" placeholder="https://exemplo.com" required />
+        </label>
+        <label>
+          <span>Descrição</span>
+          <input id="description" />
+        </label>
+        <label>
+          <span>Categoria</span>
+          <input id="category" placeholder="Ex: Projeto, Portfólio, Exercício" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Salvar</button>
+          <button type="button" id="cancelBtn" class="btn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small class="muted">Página criada para organizar os sites da turma. Salvo localmente no navegador. Feito por Isabelly Ramos com a ajuda de IA.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
