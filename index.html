@@ -1,71 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Índice de Sites da Turma</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfólio — Isabelly Ramos dos Santos - 3A - Desenvolvimento de sistemas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="logo">Sites da Turma</h1>
+      <div class="brand">
+        <h1>Isabelly Ramos dos Santos</h1>
+        <p>Desenvolvimento de Sistemas — Portfólio</p>
+      </div>
       <div class="controls">
-        <input id="search" type="search" placeholder="Buscar sites..." aria-label="Buscar sites" />
-        <select id="categoryFilter" aria-label="Filtrar por categoria">
-          <option value="all">Todas as categorias</option>
-        </select>
-        <button id="addBtn" class="btn primary">+ Novo</button>
+        <button id="themeToggle" class="btn icon">🌙</button>
       </div>
     </div>
   </header>
 
-  <main class="container main-content">
-    <section class="toolbar" aria-hidden="true">
-      <small class="muted">Use o botão Novo para adicionar um site; clique no card para abrir; ícone editar para modificar.</small>
+  <main class="container">
+    <section class="intro">
+      <h2>Meus projetos!</h2>
+      <p class="lead">Aqui estão alguns sites que criei (exercícios)! Clique em um cartão para abrir o site em nova aba.</p>
     </section>
 
-    <section id="cards" class="cards-grid" aria-live="polite"></section>
-  </main>
-
-  <!-- Modal Form -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-panel" role="document">
-      <header class="modal-header">
-        <h2 id="modalTitle">Adicionar site</h2>
-        <button id="closeModal" class="btn icon" aria-label="Fechar">✕</button>
-      </header>
-      <form id="linkForm" class="form">
-        <input type="hidden" id="linkId" />
-        <label>
-          <span>Título</span>
-          <input id="title" required />
-        </label>
-        <label>
-          <span>URL</span>
-          <input id="url" type="url" placeholder="https://exemplo.com" required />
-        </label>
-        <label>
-          <span>Descrição</span>
-          <input id="description" />
-        </label>
-        <label>
-          <span>Categoria</span>
-          <input id="category" placeholder="Ex: Projeto, Portfólio, Exercício" />
-        </label>
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Salvar</button>
-          <button type="button" id="cancelBtn" class="btn">Cancelar</button>
+    <section class="portfolio-grid" id="portfolio">
+      <!-- Exemplo de cartão. Duplique e edite para cada projeto -->
+      <article class="card" data-title="Projeto 1" data-url="https://gamma.app/docs/Agenda-Escolar-f6ecilkz0mc8qen" data-img="assets/proj1.jpg">
+        <div class="thumb" style="background-image:url('assets/proj1.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Agenda Escolar.</h3>
+          <p>Gamma</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://gamma.app/docs/Agenda-Escolar-f6ecilkz0mc8qen" target="_blank" rel="noopener">Abrir</a>
+          </div>
         </div>
-      </form>
-    </div>
-  </div>
+      </article>
+
+      <article class="card" data-title="Projeto 1" data-url="https://gamma.app/docs/Startups-Inovacao-e-Empreendedorismo-13dpo8nr0fk2jnc" data-img="assets/proj1.jpg">
+        <div class="thumb" style="background-image:url('assets/proj1.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Startup.</h3>
+          <p>Gamma</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://gamma.app/docs/Startups-Inovacao-e-Empreendedorismo-13dpo8nr0fk2jnc" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://gamma.app/docs/Propriedades-Intelectuais-4sd4vbbwa32nhz8" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Propriedades Intelectuais.</h3>
+          <p>Gamma</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://gamma.app/docs/Propriedades-Intelectuais-4sd4vbbwa32nhz8" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/UsandoFor/blob/main/usandofor.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Usando For no Js</h3>
+          <p>Códigos passados em sala de aula por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/UsandoFor/blob/main/usandofor.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/UsandoFor/blob/main/usandofor.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Usando Break no Js</h3>
+          <p>Códigos passados em sala de aula por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/UsandoBreakJs/blob/main/usandobreak.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/UsandoFor/blob/main/usandofor.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Média Se</h3>
+          <p>Códigos passados em sala de aula por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/MediaSeJs/blob/main/M%C3%A9dia_Se.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/Filtrar.js/blob/main/filtrar.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Filtrar Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/Filtrar.js/blob/main/filtrar.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/leitura.js/blob/main/leitura.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Leitura Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/leitura.js/blob/main/leitura.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/alterar.js/blob/main/alterar.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Alterar Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/alterar.js/blob/main/alterar.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/cliente.json/blob/main/cliente.json" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Cliente JSON</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/cliente.json/blob/main/cliente.json" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/objet2.js/blob/main/objet2.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Objet2 Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/objet2.js/blob/main/objet2.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/substring.js/blob/main/substring.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Substring Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/substring.js/blob/main/substring.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/colchete.js/blob/main/colchete.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Colchete Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/colchete.js/blob/main/colchete.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://gamma.app/docs/Metricas-e-Melhorias-nos-Negocios-raa1zgfuanfvva6" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Gamma - Métricas e Melhorias de Negociação.</h3>
+          <p>Apresentação feita para o exercício no Classroom.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://gamma.app/docs/Metricas-e-Melhorias-nos-Negocios-raa1zgfuanfvva6" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/selectionSort.js/blob/main/selectionSort.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>SelectionSort Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/selectionSort.js/blob/main/selectionSort.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/listaLivros.js/blob/main/listaLivros.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>ListaLivros Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/listaLivros.js/blob/main/listaLivros.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-title="Projeto 2" data-url="https://github.com/isabellyrss/ConjuntoNumeros.js/blob/main/conjuntonumeros.js" data-img="assets/proj2.jpg">
+        <div class="thumb" style="background-image:url('assets/proj2.jpg')" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>ConjuntoNúmeros Js</h3>
+          <p>Códigos passados no Classroom por: Robinho.</p>
+          <div class="card-actions">
+            <button class="btn preview">Visualizar</button>
+            <a class="btn outline" href="https://github.com/isabellyrss/ConjuntoNumeros.js/blob/main/conjuntonumeros.js" target="_blank" rel="noopener">Abrir</a>
+          </div>
+        </div>
+      </article>
+      <!-- Adicione mais cards seguindo o mesmo padrão -->
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small class="muted">Página criada para organizar os sites da turma. Salvo localmente no navegador. Feito por Isabelly Ramos com a ajuda de IA.</small>
+      <p>© <strong>Isabelly Ramos dos Santos - Desenvolvimento de Sistemas - 2026</strong> — Todos os direitos reservados</p>
     </div>
   </footer>
+
+  <!-- Modal de preview -->
+  <div id="previewModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <h3 id="modalTitle">Preview</h3>
+        <div>
+          <a id="openInNew" class="btn outline small" href="#" target="_blank" rel="noopener">Abrir em nova aba</a>
+          <button id="closeModal" class="btn icon">✕</button>
+        </div>
+      </header>
+      <div class="modal-body">
+        <iframe id="previewFrame" src="" title="Preview do projeto"></iframe>
+      </div>
+    </div>
+    <div class="modal-backdrop"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
